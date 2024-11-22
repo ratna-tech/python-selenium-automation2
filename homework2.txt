@@ -1,0 +1,31 @@
+Amazon logo:
+//i[starts-with(@class,"a-icon")] 
+
+Email field:
+//input[@id="ap_email"]
+
+Continue button:
+//input[@id="continue"]
+
+Conditions of use link:
+//div[@id="legalTextRow"]//a[1]
+//div[@id="legalTextRow"]//a[text()= "conditions of use"]
+
+Privacy Notice link:
+//div[@id="legalTextRow"]//a[2]
+//div[@id="legalTextRow"]//a[text()= "Privacy Notice"]
+
+Need help link:
+//span[contains(@class,"a-expander")]
+
+forgot password:
+//a[@id="auth-fpp-link-bottom"]
+
+
+Other issues with Sign-In link:
+//a[@id="ap-other-signin-issues-link"]
+
+
+Create your Amazon account button
+
+//a[@id="createAccountSubmit"]
