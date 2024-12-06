@@ -1,0 +1,37 @@
+Amazon logo:
+.a-icon-logo
+
+Create Account:
+h1.a-spacing-small
+
+Name field:
+#ap_customer_name
+
+Email field:
+#email
+
+Password Field:
+#ap_password
+
+Password alert:
+[id='auth-password-missing-alert'] .a-alert-content
+
+Reenter password:
+#ap_password_check
+
+Continue button:
+#auth-continue
+
+Conditions of use link:
+[href*='ap_register_notification_condition_of_use']
+
+Privacy Notice link:
+[href*='ap_register_notification_privacy_notice']
+
+Need help link:
+//span[contains(@class,"a-expander")]
+
+Sign-In link:
+.a-link-emphasis
+
+
