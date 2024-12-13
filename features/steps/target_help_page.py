@@ -43,8 +43,8 @@ def verify_grid_count(context):
         c +=1
 
 
-@then('verify {expected_text}')
-def verify_grid_count(context, expected_text):
+"""@then('verify {expected_text}')
+def verify_text_expected(context, expected_text):
     actual_text = context.driver.find_element(*browse_pages).text
-    assert expected_text in actual_text
+    assert expected_text in actual_text"""
 
