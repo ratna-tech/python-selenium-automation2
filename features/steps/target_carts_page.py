@@ -18,13 +18,21 @@ def add_item_to_cart(context):
     sleep(4)
 
 
-@then('verify item in cart')
-def verify_found_results_text(context):
-    sleep(4)
+@then('verify {item} in cart')
+def verify_found_results_text(context,item):
+    """sleep(4)
     #selected_item = context.driver.wait.until(EC.visibility_of_element_located(product_in_cart_title))
     selected_item= context.driver.find_element(By.XPATH, "//a[@data-test='product-title']")
     print(selected_item.text)
     sleep(4)
     item_in_cart = context.driver.find_element(By.XPATH, "//div[@class='h-display-flex h-margin-b-default']//h4")
     assert selected_item.text in item_in_cart.text
-    f'{selected_item.text} not in {item_in_cart.text}'
+    f'{selected_item.text} not in {item_in_cart.text}'"""
+    context.app.search_results_page.verify_search_results(item)
+
+
+@then('Verify {search_word} message is shown')
+def verify_cart_empty(context,search_word):
+    context.app.cart_page.verify_cart_empty(search_word)
+
+

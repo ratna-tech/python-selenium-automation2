@@ -4,6 +4,11 @@ Feature:target cart featurres
 
  Scenario: verify item in cart
     Given Open Target page
-    When search for candy
+    When search for jeans
     When add item to cart
-    Then verify item in cart
+    Then verify jeans in cart
+
+Scenario: User can go to cart
+    Given Open Target page
+    When Click on Cart icon
+    Then Verify Your cart is empty message is shown

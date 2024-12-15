@@ -19,9 +19,9 @@ total_product1 = (By.XPATH,"//div[@data-test='@web/ProductCard/ProductCardVarian
 
 @when('search for {item}')
 def search_for_candy(context,item):
-    context.driver.find_element(By.ID, "search").send_keys(item)
-    context.driver.find_element(By.ID, "search").send_keys(Keys.ENTER)
-
+    """context.driver.find_element(By.ID, "search").send_keys(item)
+    context.driver.find_element(By.ID, "search").send_keys(Keys.ENTER)"""
+    context.app.header.search_product(item)
 
 @given('Open target product {product_id} page')
 def open_target(context, product_id):
