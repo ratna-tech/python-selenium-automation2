@@ -16,16 +16,11 @@ def verify_found_results_text(context, search_word):
     f'{search_word} not in {actual_word}'"""
 
 
-@when ('Click Sign In')
-def click_sign_in(context):
-    context.driver.find_element(By.ID,"account-sign-in").click()
-    sleep(4)
 
 
-@when('From right side navigation menu, click Sign')
-def right_side_sign_in(context):
-    context.driver.find_element(By.XPATH, "//button[@data-test='accountNav-signIn']").click()
-    sleep(1)
+
+
+
 
 
 """@then('Verify {search_word1} is shown')

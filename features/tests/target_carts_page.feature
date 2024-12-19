@@ -8,7 +8,7 @@ Feature:target cart featurres
     When add item to cart
     Then verify jeans in cart
 
-Scenario: User can go to cart
+Scenario: Verify Your cart is empty message displays
     Given Open Target page
     When Click on Cart icon
     Then Verify Your cart is empty message is shown

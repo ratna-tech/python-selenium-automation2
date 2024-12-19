@@ -1,6 +1,6 @@
 Feature: Test Scenarios for Search functionality
 
-  Scenario: # Search for candy
+  Scenario: # Search for jeans
     Given Open Target page
     When search for jeans
     When add item to cart

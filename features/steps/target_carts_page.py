@@ -10,12 +10,13 @@ product_in_cart_title = (By.XPATH, "//a[@data-test='product-title']")
 
 @when('add item to cart')
 def add_item_to_cart(context):
-    sleep(4)
+    context.app.cart_page.add_item_to_cart()
+    """sleep(4)
     #context.driver.find_element(By.CSS_SELECTOR,"[id*=addToCartButtonOrTextIdFor]").click()
     element = context.driver.wait.until(EC.element_to_be_clickable(product_in_cart))
    # element =context.driver.find_element(By.CSS_SELECTOR, "[id*='addToCartButton']")
     context.driver.execute_script("arguments[0].click();", element)
-    sleep(4)
+    sleep(4)"""
 
 
 @then('verify {item} in cart')
@@ -32,7 +33,7 @@ def verify_found_results_text(context,item):
 
 
 @then('Verify {search_word} message is shown')
-def verify_cart_empty(context,search_word):
-    context.app.cart_page.verify_cart_empty(search_word)
+def verify_item_in_cart(context,search_word):
+    context.app.cart_page.verify_item_in_cart(search_word)
 
 
