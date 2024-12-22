@@ -1,6 +1,13 @@
 from behave import given, when, then
 from time import sleep
 
+@given('Open sign in page')
+def open_signin(context):
+    context.app.main_page.open_main()
+    context.app.header.click_on_sign_in()
+    context.app.sign_in_page.click_on_sign_in()
+    #context.driver.get('https://www.target.com/')
+    #context.app.sign_in_page.open_sign_in_page()
 
 @when('From right side navigation menu, click Sign')
 def right_side_sign_in(context):
@@ -36,3 +43,20 @@ def click_maybe_button(context):
 def verify_sign_in(context):
     sleep(5)
     context.app.sign_in_page.verify_sign_in_user_name()
+
+@when('Store original window')
+def store_original_window(context):
+    context.app.sign_in_page.store_original_window()
+
+@when('Click on Target terms and conditions link')
+def click_target_terms_and_conditions_link(context):
+    context.app.sign_in_page.click_on_target_terms_and_conditions_link()
+    sleep(10)
+
+@when('Switch to the newly opened window')
+def switch_to_newly_opened_window(context):
+    context.app.sign_in_page.switch_to_newly_opened_window()
+
+@then('switch back to original page')
+def switch_back_to_original_page(context):
+    context.app.sign_in_page.switch_back_to_original_page()
