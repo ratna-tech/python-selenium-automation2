@@ -19,7 +19,7 @@ def click_cart(context):
      context.app.header.click_on_cart_icon()
      sleep(1)
 
-"""@when ('Click Sign In')
+@when ('Click Sign In')
 def click_sign_in(context):
     #context.driver.find_element(By.ID,"account-sign-in").click()
     context.app.header.click_on_sign_in()
@@ -58,6 +58,6 @@ def click_maybe_button(context):
 @then('Verify Sign in')
 def verify_sign_in(context):
     sleep(5)
-    context.app.sign_in_page.verify_sign_in_user_name()"""
+    context.app.sign_in_page.verify_sign_in_user_name()
 
 

@@ -8,7 +8,7 @@ Scenario: User can go to sign in page
     When From right side navigation menu, click Sign
     Then Verify Sign into your Target account is shown
 
- """Scenario: User can sign into target account
+Scenario: User can sign into target account
     Given Open Target page
     When Click Sign In
     When From right side navigation menu, click Sign
@@ -17,4 +17,4 @@ Scenario: User can go to sign in page
     When Click on Signin button
     #When Click on Maybe later button
     When Click skip button
-    Then Verify Sign in"""
+    Then Verify Sign in
