@@ -15,6 +15,7 @@ class SignIn(BasePage):
     MAYBE_LATER_BUTTON= (By.XPATH,"//button[text()='Maybe later']")
     SKIP_BTN = (By.CSS_SELECTOR, '[href="/"]')
     TERMS_AND_CONDITION = (By.XPATH, "//a[contains(@aria-label,'terms & conditions')]")
+    CANT_FIND_ACCOUNT_MESSAGE= (By.CSS_SELECTOR,"[data-test='authAlertDisplay'] div")
     original_window = ""
     def open_sign_in_page(self):
         self.open_url('https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace=ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default=false&actions=create_session_signin')
@@ -28,12 +29,19 @@ class SignIn(BasePage):
     def enter_email(self):
         self.input_text('ashvat09@gmail.com',*self.EMAIL_TEXTBOX)
 
+    def enter_incorrect_email(self):
+        self.input_text('ash66@gmail.com',*self.EMAIL_TEXTBOX)
+
     def enter_password(self):
         self.input_text('Sunny09!',*self.PSWD_TEXTBOX)
+
+    def enter_incorrect_password(self):
+        self.input_text('tanrat123!',*self.PSWD_TEXTBOX)
 
     def click_on_login(self):
          #self.wait_and_click(*self.LOGIN_BUTTON)
         self.find_element(*self.LOGIN_BUTTON).click()
+        sleep(4)
 
     def click_skip_btn(self):
         self.find_element(*self.SKIP_BTN).click()
@@ -43,6 +51,9 @@ class SignIn(BasePage):
 
     def verify_sign_in_user_name(self):
         self.verify_partial_text('Ashvat', *self.SIGNED_IN_USER)
+
+    def verify_incorrect_sign_in(self):
+        self.verify_text("We can't find your account.", *self.CANT_FIND_ACCOUNT_MESSAGE)
 
     def store_original_window(self):
         original_window= self.get_current_window_handle()

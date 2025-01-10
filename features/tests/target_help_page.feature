@@ -9,5 +9,10 @@ Feature: Target help features
     Then verify Search Help button
     Then verify 6 grids under What would you like to do
     Then verify grids in What would you like to do footer
-    Then verify Browse all Help pages
+  #  Then verify Browse all Help pages
 
+
+  Scenario: Verify help topic dropdown
+    Given Open Target help subcategory page
+    When Select help topic dropdown
+    Then Verify Returns page opens

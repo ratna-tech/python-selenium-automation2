@@ -1,19 +1,19 @@
 from behave import given, when, then
 from time import sleep
 
-@given('Open sign in page')
+"""@given('Open sign in page')
 def open_signin(context):
     context.app.main_page.open_main()
     context.app.header.click_on_sign_in()
     context.app.sign_in_page.click_on_sign_in()
     #context.driver.get('https://www.target.com/')
     #context.app.sign_in_page.open_sign_in_page()
-
-@when('From right side navigation menu, click Sign')
+"""
+"""@when('From right side navigation menu, click Sign')
 def right_side_sign_in(context):
     #context.driver.find_element(By.XPATH, "//button[@data-test='accountNav-signIn']").click()
     context.app.sign_in_page.click_on_sign_in()
-    sleep(4)
+    sleep(4)"""
 
 @then('Verify Sign into your Target account is shown')
 def verify_sign_into_text(context):
@@ -60,3 +60,15 @@ def switch_to_newly_opened_window(context):
 @then('switch back to original page')
 def switch_back_to_original_page(context):
     context.app.sign_in_page.switch_back_to_original_page()
+
+@when('Enter incorrect email')
+def enter_incorrect_email(context):
+    context.app.sign_in_page.enter_incorrect_email()
+
+@when('Enter incorrect password')
+def enter_incorrect_password(context):
+    context.app.sign_in_page.enter_incorrect_password()
+
+@then('Verify Incorrect Sign in')
+def verify_incorrect_sign_in(context):
+    context.app.sign_in_page.verify_incorrect_sign_in()

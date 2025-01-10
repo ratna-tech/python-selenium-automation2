@@ -41,10 +41,23 @@ def verify_grid_count(context):
     for e in elements:
         verify = e.text == footer_grids[c]
         c +=1
+@given('Open Target help subcategory page')
+def open_target_subcategory(context):
+    context.app.help_page.open_target_subcategory()
 
+
+@when('Select help topic dropdown')
+def select_help_topic_dropdown(context):
+    context.app.help_page.select_help_topic_dropdown()
+
+
+@then('Verify Returns page opens')
+def verify_returns_page(context):
+    context.app.help_page.verify_returns_page()
 
 """@then('verify {expected_text}')
 def verify_text_expected(context, expected_text):
     actual_text = context.driver.find_element(*browse_pages).text
     assert expected_text in actual_text"""
+
 

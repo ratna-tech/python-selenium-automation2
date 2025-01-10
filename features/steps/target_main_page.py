@@ -8,7 +8,7 @@ from time import sleep
 def open_target(context):
     #context.driver.get('https://www.target.com/')
     context.app.main_page.open_main()
-
+sleep(5)
 @given('Open target circle page')
 def open_target_circle_page(context):
     context.driver.get('https://www.target.com/l/target-circle/-/N-pzno9')
@@ -19,11 +19,11 @@ def click_cart(context):
      context.app.header.click_on_cart_icon()
      sleep(1)
 
-@when ('Click Sign In')
+"""@when ('Click Sign In')
 def click_sign_in(context):
     #context.driver.find_element(By.ID,"account-sign-in").click()
     context.app.header.click_on_sign_in()
-    sleep(4)
+    sleep(4)"""
 
 @when('From right side navigation menu, click Sign')
 def right_side_sign_in(context):
@@ -31,7 +31,7 @@ def right_side_sign_in(context):
     context.app.sign_in_page.click_on_sign_in()
     sleep(4)
 
-@then('Verify Sign into your Target account is shown')
+"""@then('Verify Sign into your Target account is shown')
 def verify_sign_into_text(context):
     context.app.sign_in_page.verify_sign_into_target_account_text()
 
@@ -61,3 +61,4 @@ def verify_sign_in(context):
     context.app.sign_in_page.verify_sign_in_user_name()
 
 
+"""

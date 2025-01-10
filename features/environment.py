@@ -29,7 +29,7 @@ def browser_init(context,scenario_name):
 
     ### BROWSERSTACK ###
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user = 'ratnasinha_y7CvZ9'
+    """bs_user = 'ratnasinha_y7CvZ9'
     bs_key = 'GJyz5rZdwLusiDrsqssy'
     url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
     #
@@ -42,7 +42,7 @@ def browser_init(context,scenario_name):
      }
     options.set_capability('bstack:options', bstack_options)
     context.driver = webdriver.Remote(command_executor=url, options=options)
-
+"""
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
     context.driver.wait = WebDriverWait(context.driver, 15)
